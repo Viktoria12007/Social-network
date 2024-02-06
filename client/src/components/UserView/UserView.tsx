@@ -4,8 +4,14 @@ import {
   getGradientByIndex,
 } from './getColorByUsername';
 import './UserView.css';
+import {User} from "../../api/User";
+import {FC} from "react";
 
-export const UserView = ({ user }) => {
+interface UserViewProps {
+    user: User
+}
+
+export const UserView: FC<UserViewProps> = ({ user }) => {
   const colorIndex = getColorIndexByUsername(user.username);
 
   return (
