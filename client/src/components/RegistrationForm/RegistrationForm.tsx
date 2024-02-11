@@ -41,7 +41,7 @@ export const RegistrationForm: FC = () => {
         />
       </FormField>
 
-        {registerMutation.error && <spa>{registerMutation.error.message}</spa>}
+        {registerMutation.error && <span>{registerMutation.error.message}</span>}
 
       <Button type="submit" title="Зарегистрироваться" isLoading={registerMutation.isPending} />
     </form>
